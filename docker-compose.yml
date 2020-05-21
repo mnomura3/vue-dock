@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  web:
+    # Dockerfileの場所
+    build: .
+    # 常時起動
+    tty: true
+    # コンテナ起動時のコマンド
+
+    ports:
+      - "8080:8080"
+    # ホストOSとコンテナ内でソースコードを共有
+    volumes:
+      - .:/usr/src/app/
